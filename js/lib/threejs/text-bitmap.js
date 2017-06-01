@@ -8,6 +8,7 @@ var TextBitmap = function( config ) {
   var geometry = this.geometry = createGeometry( config ); // text-bm-font
 
   var textureLoader = new THREE.TextureLoader();
+      textureLoader.crossOrigin = '';
   var texture = textureLoader.load(config.imagePath, function(){
     texture.needsUpdate = true;
     texture.minFilter = THREE.LinearMipMapLinearFilter;
